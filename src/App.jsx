@@ -1,9 +1,10 @@
 import Layout from './components/layout'
+import RegisterPet from './pages/registerPet'
 
 function App() {
   return (
    <Layout >
-    <div >Main</div>
+    <RegisterPet/>
    </Layout>
   )
 }
