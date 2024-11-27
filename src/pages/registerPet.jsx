@@ -1,11 +1,12 @@
 import { useForm } from "react-hook-form";
-import { registerPet } from "../service/apiService";
+import { registerPet } from "../service/apiService.js";
 
 function RegisterPet(){
     const { register,handleSubmit,reset } = useForm();
    
 
     const submit = async(data)=>{
+       
         try{
             await registerPet(data);
             alert("Pet cadastrado com sucesso")

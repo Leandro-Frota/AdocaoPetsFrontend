@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom"
+
 function SideMenu(){
     return (
         <div className="d-flex flex-column gap-2">
-            <div className="btn btn-success">Cadstrar Pet</div>
-            <div className="btn btn-success">Cadastrar Adotante</div>
-            <div className="btn btn-success">Adoção</div>
-            <div className="btn btn-success">Filtro pet</div>
+           <Link to="/register-pet"> <div className="p-3 bg-success text-white text-center rounded ">Cadastrar Pet</div></Link>
+            <div className="btn p-3 bg-success text-white text-center rounded ">Cadastrar Adotante</div>
+            <div className="btn p-3 bg-success text-white text-center rounded">Cadastrar Adoção</div>
+            <div className="btn p-3 bg-success text-white text-center rounded">Buscar pet</div>
         </div>
         
         
