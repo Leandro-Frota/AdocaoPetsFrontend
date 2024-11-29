@@ -1,9 +1,19 @@
+import Home from "../pages/home";
 import Footer from "./footer";
 import Header from "./header";
 import SideMenu from "./sideMenu";
+import { useLocation } from "react-router-dom";
 
 function Layout({ children }){
-    return(
+    const location = useLocation()
+
+    if(location.pathname == '/home'){
+        return (
+            <Home/>
+        )
+    }
+
+    return(      
         <div className="d-flex flex-column vh-100 vw-100">           
             <Header/>          
             <div className="d-flex flex-grow-1">
@@ -13,14 +23,17 @@ function Layout({ children }){
                 <main className="p-2 flex-grow-1">
                     <div className="container">
                         {children}
-                    </div>
-                    
+                    </div>                    
                 </main>
-            </div>    
+            </div>  
             
-           <Footer/>
+            <Footer/>
+            
         </div>
     )
+
 }
+   
+
 
 export default Layout;

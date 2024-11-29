@@ -1,5 +1,6 @@
-import React from 'react';
+
 import { Container, Row, Col } from 'react-bootstrap'; 
+import { Link } from 'react-router-dom';
 
 
 import pet1 from '../assets/pet1.jpg';
@@ -7,12 +8,20 @@ import pet2 from '../assets/pet2.jpg';
 
 const Home = () => {
   return (
-    <Container fluid className="mt-5">
+    <Container fluid className=" h-full mt-2">
       
       <Row className="text-center mb-4">
         <Col>
           <h1>Bem-vindo ao Link Adoção!</h1>
           <p>Encontre seu novo amigo peludo e mude a vida dele para sempre.</p>
+        </Col>  
+        
+      </Row>
+      <Row className="text-center mb-4">
+        <Col>
+          <Link to="/main" className="btn btn-success btn-lg">
+            Entrar
+          </Link>
         </Col>
       </Row>
 
