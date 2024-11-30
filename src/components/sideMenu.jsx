@@ -7,6 +7,7 @@ function SideMenu(){
             <div className="btn p-3 bg-success text-white text-center rounded ">Cadastrar Adotante</div>
             <div className="btn p-3 bg-success text-white text-center rounded">Cadastrar Adoção</div>
             <div className="btn p-3 bg-success text-white text-center rounded">Buscar pet</div>
+            <div className="btn p-3 bg-success text-white text-center rounded">Buscar Adoção</div>
         </div>
         
         

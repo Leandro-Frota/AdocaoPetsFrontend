@@ -5,7 +5,7 @@ import logo from '../assets/logo.jpeg';
 function Header() {
     return (
         <Navbar bg="white" expand="lg" className="px-4 border-bottom">
-            <Navbar.Brand href="#" className="d-flex align-items-center">
+            <Navbar.Brand href="" className="d-flex align-items-center">
                 <img
                     src={logo}
                     alt="Logo"
