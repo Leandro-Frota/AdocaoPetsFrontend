@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 import { getPet } from "../service/apiService";
 
@@ -11,14 +11,14 @@ function SearchPets() {
     status: "",
   });
 
-  
+  console.log(searchCriteria)
   useEffect(() => {
     const fetchPets = async () => {
       try {
-        const response = await getPet.get("/pet"); 
+        const response = await getPet(); 
         console.log("Pets recebidos da API:", response.data); 
         setPets(response.data); 
-        setFilteredPets(response.data); 
+        // setFilteredPets(response.data); 
       } catch (error) {
         console.error("Erro ao buscar os pets:", error);
       }
@@ -34,10 +34,15 @@ function SearchPets() {
     const { name, species, status } = searchCriteria;
 
     const results = pets.filter((pet) => {
+
+      if(!name && !species && !status){
+        return setFilteredPets([])
+      }
+
       return (
         (name ? pet.name.toLowerCase().includes(name.toLowerCase()) : true) &&
         (species ? pet.species.toLowerCase().includes(species.toLowerCase()) : true) &&
-        (status ? pet.status === status : true)
+        (status ? pet.status.toLowerCase().includes(status.toLocaleLowerCase()) : true)
       );
     });
 
@@ -117,14 +122,14 @@ function SearchPets() {
                   <div>
                     <strong>Nome:</strong> {pet.name} <br />
                     <strong>Espécie:</strong> {pet.species} <br />
-                    <strong>Data de Nascimento:</strong> {pet.dateBorn} <br />
+                    <strong>Idade(meses):</strong> {pet.age} <br />
                     <strong>Descrição:</strong> {pet.description} <br />
                     <strong>Status:</strong> {pet.status}
                   </div>
                 </li>
               ))
             ) : (
-              <li className="list-group-item text-center">Nenhum pet encontrado.</li>
+              <li className="list-group-item text-center"></li>
             )}
           </ul>
         </div>
