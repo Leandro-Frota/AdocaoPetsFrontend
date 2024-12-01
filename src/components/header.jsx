@@ -1,17 +1,18 @@
 
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 import logo from '../assets/logo.jpeg'; 
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <Navbar bg="white" expand="lg" className="px-4 border-bottom">
             <Navbar.Brand href="" className="d-flex align-items-center">
-                <img
+                <Link to='/main'><img
                     src={logo}
                     alt="Logo"
                     width="80"
                     className="mr-2"
-                />
+                /></Link>
                 <span className="font-weight-bold" style={{ fontSize: '24px', color: '#6c757d' }}>
                     Link Adoção
                 </span>
@@ -33,7 +34,7 @@ function Header() {
                     <Button variant="outline-success">Buscar</Button>
                 </Form>
 
-                <Button variant="outline-primary">Logout</Button>
+                <Link to='/home'><div className="btn btn-primary outline-primary">Logout</div></Link>
             </Navbar.Collapse>
         </Navbar>
     );

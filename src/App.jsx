@@ -7,14 +7,9 @@ import SearchPets from './pages/SearchPets'
 function App() {
   return (
     <BrowserRouter>
-      <Routes>            
-                    
-        <Route path="/main" element={<Layout />} />
-                                
-      </Routes>
       <Layout>
-        <Routes>              
-
+        <Routes>        
+ 
           <Route path="/register-pet" element={<RegisterPet />} /> 
           <Route path="/search-pet" element={<SearchPets />} />       
         </Routes>
