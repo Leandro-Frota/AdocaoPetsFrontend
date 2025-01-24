@@ -62,8 +62,8 @@ function RegisterPet(){
                             className="form-select"
                         >
                             <option value="">Selecione</option>
-                            <option value="Status">Disponível</option>
-                            <option value="Status">Adotado</option>
+                            <option value="Disponível">Disponível</option>
+                            <option value="Adotado">Adotado</option>
                             
                         </select>
                     </div>
