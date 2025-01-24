@@ -4,18 +4,23 @@ import Layout from './components/layout'
 import RegisterPet from './pages/registerPet'
 import SearchPets from './pages/SearchPets'
 import Login from './pages/login'
+import Home from './pages/home'
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>        
- 
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+     
+      <Route element={<Layout />}>    
           <Route path="/register-pet" element={<RegisterPet />} /> 
-          <Route path="/search-pet" element={<SearchPets />} />       
-          <Route path="/login" element={<Login/>} />
-        </Routes>
-      </Layout>
+          <Route path="/search-pet" element={<SearchPets />} />  
+      </Route>     
+         
+          
+    </Routes>
+    
     </BrowserRouter>
   )
 }

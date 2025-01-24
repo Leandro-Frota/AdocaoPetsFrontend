@@ -1,17 +1,17 @@
-import Home from "../pages/home";
+// import Home from "../pages/home";
 import Footer from "./footer";
 import Header from "./header";
 import SideMenu from "./sideMenu";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 function Layout({ children }){
-    const location = useLocation()
+    // const location = useLocation()
 
-    if(location.pathname == '/home'){
-        return (
-            <Home/>
-        )
-    }
+    // if(location.pathname == '/home'){
+    //     return (
+    //         <Home/>
+    //     )
+    // }
 
     return(      
         <div className="d-flex flex-column vh-100 vw-100">           

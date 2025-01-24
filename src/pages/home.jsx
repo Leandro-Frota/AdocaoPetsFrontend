@@ -19,7 +19,7 @@ const Home = () => {
       </Row>
       <Row className="text-center mb-4">
         <Col>
-          <Link to="/main" className="btn btn-success btn-lg">
+          <Link to="/login" className="btn btn-success btn-lg">
             Entrar
           </Link>
         </Col>
