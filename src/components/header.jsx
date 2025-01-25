@@ -2,6 +2,7 @@
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 import logo from '../assets/logo.jpeg'; 
 import { Link } from "react-router-dom";
+import LogoutButton from "./logout.jsx";
 
 function Header() {
     return (
@@ -34,7 +35,8 @@ function Header() {
                     <Button variant="outline-success">Buscar</Button>
                 </Form>
 
-                <Link to='/home'><div className="btn btn-primary outline-primary">Logout</div></Link>
+                {/* <Link to='/'><div className="btn btn-primary outline-primary">Logout</div></Link> */}
+                <LogoutButton />
             </Navbar.Collapse>
         </Navbar>
     );

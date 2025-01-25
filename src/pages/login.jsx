@@ -14,9 +14,10 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Adicione a lógica de autenticação aqui
+     
         try{
             const response = await login({email, password});
+            console.log(response);
             if(response.status === 200){
                 sign(response.data);
                 navigate('/main');
@@ -30,6 +31,8 @@ const Login = () => {
         }
         console.log('Email:', email);
         console.log('Password:', password);
+        console.log('Usuário logado');
+       
         // Redirecionar para a página principal após o login
       
     };

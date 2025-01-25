@@ -7,6 +7,6 @@ const api = axios.create({
     }
 })
 
-export const getPet = () => api.get('/pet');
+export const getPet = () => api.get('/pet',{headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}});
 export const registerPet = (data) => api.post('/pet',data,{headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}});
 export const login = (data) => api.post('/login',data);

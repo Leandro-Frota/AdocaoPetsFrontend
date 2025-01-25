@@ -11,9 +11,9 @@ export const AuthProvider = ({ children }) => {
     setUsuarioId(data.id);
     setToken(data.token);
     setProfile(data.profile);
-    localStorage.setItem("id", data.id);
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("profile", data.profile);  
+    localStorage.setItem("id", data.data.id);
+    localStorage.setItem("token", data.token);  
+    localStorage.setItem("profile", data.data.profile);  
 
     };
 

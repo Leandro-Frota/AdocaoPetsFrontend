@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path='/main' element={<Layout />}/>     
-      <Route element={<Layout />}>    
+      <Route path="/login" element={<Login />} />         
+      <Route element={<Layout />}>  
+        <Route path='/main' element={""} />  
           <Route path="/register-pet" element={<RegisterPet />} /> 
           <Route path="/search-pet" element={<SearchPets />} />  
       </Route>     
